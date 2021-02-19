@@ -3,5 +3,7 @@
   <p>user-icon</p>
   <p><%= @book.title %></p>
   <p><%= @book.body %></p>
-  
+  <% if @book.user == current_user %>
+    <%= link_to "delete", book_path(@book), method: :delete %>
+  <% end %>
 </div>
