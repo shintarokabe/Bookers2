@@ -1,6 +1,8 @@
 <% @books.each do |book| %>
 <div>
-  <P>user-icon</P>
+  <%= link_to book_path(book.id) do %>
+    <P>user-icon</P>
+  <% end %>
   <p><%= book.title %></p>
   <p><%= book.body %></p>
 </div>
